@@ -28,12 +28,7 @@ SECRET_KEY = '7fd5^_bgzmq!8!-7zm=b*w3jfgk4bkn!0i+hfx(3mh!$!+pqan'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['stable_project2.herokuapp.com',
-                 'mynewapp939.herokuapp.com',
-                 'thisisanewapp231.herokuapp.com',
-                 'localhost',
-                 'stable_projectclimbing.com',
-                 'www.stable_projectclimbing.com']
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
@@ -90,10 +85,9 @@ DATABASES = {
          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
      }
  }
-DATABASES = {}
 
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-#DATABASES['default'] = dj_database_url.config(default='postgres://mmrlxwecwxcnpk:184797c9ae97e153d7f27c42b23eb5c60d1acc6d751dac2ab0181a4c05539243@ec2-54-221-212-15.compute-1.amazonaws.com:5432/d61p5r6snv07lr')
+# DATABASES['default'] = dj_database_url.config(default='POSTGRES_LINK_FROM_HEROKU')
 
 
 
@@ -139,7 +133,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'hello@stable_projectclimbing.com'
-EMAIL_HOST_PASSWORD = 'Skate123'
+EMAIL_HOST_USER = 'HELLO@CUSTOMEMAIL.com'
+EMAIL_HOST_PASSWORD = 'CUSTOM_PASSWORD'
 EMAIL_PORT = 587
 DEFAULT_LOGGING['handlers']['console']['filters'] = []
