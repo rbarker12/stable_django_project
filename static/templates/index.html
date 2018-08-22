@@ -170,6 +170,20 @@
     <!-- Custom scripts for this template -->
     <script src="../../static/js/creative.min.js"></script>
 
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+
+    <h1>Articles</h1>
+<ul>
+  {{ object_list }}
+{% for event in object_list %}
+    <li>{{ event.title }} - {{ event.message }}</li>
+{% empty %}
+    <li>No event. yet.</li>
+{% endfor %}
+</ul>
   </body>
 
 </html>
