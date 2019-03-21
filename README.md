@@ -1,7 +1,7 @@
 # stable_django_project
 
 To Run this project follow these instructions:  
-
+   
 
 
 `git clone git@github.com:kfwojton/stable_django_project.git`  
