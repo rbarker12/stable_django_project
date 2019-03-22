@@ -21,9 +21,12 @@ from django.conf import settings
 
 from django.views.generic.base import RedirectView
 
-
+class EmailPage(FormView):
+    template_name = "index.html"
+    form_class = EmailForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Home.as_view()),
+    path('form',EmailPage.as_view())
     ]
