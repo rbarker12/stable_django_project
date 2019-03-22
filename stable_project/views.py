@@ -8,3 +8,7 @@ from django.utils import timezone
 
 class Home(TemplateView):
     template_name = "index.html"
+    
+class EmailForm(forms.Form):
+    subject = forms.CharField()
+   
