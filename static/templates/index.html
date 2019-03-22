@@ -171,5 +171,11 @@
     <script src="../../static/js/creative.min.js"></script>
 
   </body>
+  
+  <form action="/your-name/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
 
 </html>
