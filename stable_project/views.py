@@ -11,4 +11,19 @@ class Home(TemplateView):
     
 class EmailForm(forms.Form):
     subject = forms.CharField()
+    
+class EmailPage(FormView):
+    template_name = "index.html"
+    form_class = EmailForm
+    success_url = ''
+    
+    def post(self,request,*args,**kwargs):
+        form - self.get_form()
+        if form.is_valid():
+            print('form is valid')
+            print(self.request.POST)
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+    
    
